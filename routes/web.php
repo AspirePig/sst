@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',['website'=>'hello world']);
 });
+
+Route::get('students','Scontroller@show');
+
+Route::get('teacher','Tcontroller@show');
+
+Route::get('monitor','Mcontroller@show');
