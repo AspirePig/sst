@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome',['website'=>'hello world']);
+    return view('login');
 });
 
 Route::get('students','Scontroller@show');
@@ -20,3 +20,7 @@ Route::get('students','Scontroller@show');
 Route::get('teacher','Tcontroller@show');
 
 Route::get('monitor','Mcontroller@show');
+
+Route::any('weixin/api', 'wxcontroller@api');
+
+Route::post('login','Controller@login');
