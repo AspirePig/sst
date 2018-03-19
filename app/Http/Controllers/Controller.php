@@ -42,4 +42,28 @@ class Controller extends BaseController
             }
     }
 
+    public function wxlogin(Request $request){
+        echo $tmp =  $request->route('usersession');
+        echo $rank = $request->route('rank');
+
+        $username = DB::table('user')->where(['wxid'=>$tmp])->value('username');
+        $request->session()->put(['user'=>$username,'rank'=>$rank]);
+        if(count($username)!=0){
+            $request->session()->put(['user'=>$username,'rank'=>$rank]);
+            if ($rank==1){
+                return redirect('students');
+            }
+            if ($rank==2){
+                return redirect('monitor');
+            }
+            if ($rank==3){
+                return redirect('teacher');
+            }
+        }
+        else{
+            return redirect()->back()->with('error', '无账户!');
+        }
+    }
+
+
 }

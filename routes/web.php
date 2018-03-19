@@ -21,6 +21,8 @@ Route::get('teacher','Tcontroller@show');
 
 Route::get('monitor','Mcontroller@show');
 
-Route::any('weixin/api', 'wxcontroller@api');
+Route::any('wx/api', 'wxcontroller@api');
+
+Route::any('wx/api2/{usersession}/{rank}', 'Controller@wxlogin');
 
 Route::post('login','Controller@login');
