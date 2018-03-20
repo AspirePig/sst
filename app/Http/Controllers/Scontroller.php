@@ -17,6 +17,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Scontroller extends Controller{
     public function show(){
+
         return view('students/students');
     }
 }

@@ -19,4 +19,17 @@ class Mcontroller extends Controller{
     public function show(){
         return view('monitor/monitor');
     }
+
+    public function worksubmit(Request $request){
+        $input = $request->all();
+//        var_dump($input);
+
+        $id=DB::table("homework")->insert(
+            ['id'=>NULL,'username'=>session('user'),'subject'=>$input['subject'],
+                'teacher'=>$input['teacher'],'workcon'=>$input['workcon']
+            ]
+        );
+        return redirect()->back()->with('success', '提交信息成功!');
+
+    }
 }

@@ -12,7 +12,7 @@
             <li><a href="#"><i class="iconfont icon-fabu"></i><span>查看作业</span></a></li>
             <li><a href="#"><i class="iconfont icon-huodong"></i><span>查看活动</span></a></li>
             <li><a href="#"><i class="iconfont icon-shoufei"></i><span>缴纳费用</span></a></li>
-            <li><a href="#"><i class="iconfont icon-xuexiao"></i><span>离校信息</span></a></li>
+            <li><a href="students/awayschool"><i class="iconfont icon-xuexiao"></i><span>离校信息</span></a></li>
         </ul>
     </div>
 @stop

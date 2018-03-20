@@ -8,10 +8,10 @@
             <li><a href="#"><i class="iconfont icon-liuyanban"></i><span>留言板</span></a></li>
             <li><a href="#"><i class="iconfont icon-vote"></i><span>微投票</span></a></li>
             <li><a href="#"><i class="iconfont icon-xiaoxi"></i><span>微请假</span></a></li>
-            <li><a href="#"><i class="iconfont icon-fabu"></i><span>发布作业</span></a></li>
+            <li><a href="monitor/releasework"><i class="iconfont icon-fabu"></i><span>发布作业</span></a></li>
             <li><a href="#"><i class="iconfont icon-huodong"></i><span>发起活动</span></a></li>
             <li><a href="#"><i class="iconfont icon-shoufei"></i><span>发起收费</span></a></li>
-            <li><a href="#"><i class="iconfont icon-xuexiao"></i><span>离校信息</span></a></li>
+            <li><a href="monitor/awayschool"><i class="iconfont icon-xuexiao"></i><span>离校信息</span></a></li>
         </ul>
     </div>
 @stop
