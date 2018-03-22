@@ -54,9 +54,11 @@
                     </div>
                 </div>
             </form>
+            <p text-align="center">账号:yang 密码:yang</p>
         </div>
     </div>
 </div>
+
 @include('./common/message')
 
 

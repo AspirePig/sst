@@ -10,43 +10,53 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//登录页面
 Route::get('/', function () {
     return view('login');
 });
 
+//学生主页面
 Route::get('students','Scontroller@show');
 
-Route::get('monitor/awayschool',function (){
-    return view('awayschool');
-});
-Route::post('monitor/awayschool/submit','Controller@awaysubmit');
-
-
+//学生登记离校信息
 Route::get('students/awayschool',function (){
     return view('awayschool');
 });
 Route::post('students/awayschool/submit','Controller@awaysubmit');
 
-Route::get('monitor/releasework',function (){
+
+//班长主页面
+Route::get('monitor','Mcontroller@show');
+//班长发布作业
+Route::any('monitor/releasework',function (){
     return view('releasework');
 });
+Route::post('monitor/releasework/submit','Mcontroller@worksubmit');
 
-Route::post('monitor/releasework',function (){
-    return view('releasework');
+//班长登记离校信息
+Route::get('monitor/awayschool',function (){
+    return view('awayschool');
 });
+Route::post('monitor/awayschool/submit','Controller@awaysubmit');
+//班长发布通知
+Route::get('monitor/releasemsg',function (){
+    return view('releasemsg');
+});
+Route::post('monitor/releasemsg/submit','Controller@msgsubmit');
 
+
+//教师主页面
 Route::get('teacher','Tcontroller@show');
 
 
-Route::get('monitor','Mcontroller@show');
-
+//微信接口
 Route::any('wx/api', 'wxcontroller@api');
 
-Route::any('wx/api2/{usersession}/{rank}/{avatarUrl}', 'Controller@wxlogin');
+Route::any('wx/api2/{usersession}/{rank}/{avatarUrl}', 'Controller@wxlogin');//通过openid登录
 
+
+//普通登录接口
 Route::post('login','Controller@login');
 
 
 
-Route::post('monitor/releasework/submit','Mcontroller@worksubmit');

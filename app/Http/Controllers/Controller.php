@@ -41,7 +41,8 @@ class Controller extends BaseController
 
 
             }
-    }
+    }//普通登录页面
+
 
     public function wxlogin(Request $request){
         $tmp =  $request->route('usersession');
@@ -67,8 +68,7 @@ class Controller extends BaseController
         else{
             return redirect('/')->with('error', '无账户!');
         }
-    }
-
+    }//微信openid登录页面
 
 
     public function awaysubmit(Request $request){
@@ -83,5 +83,18 @@ class Controller extends BaseController
         );
         return redirect()->back()->with('success', '提交信息成功!');
 
-    }
+    }//离校统计提交
+
+    public function msgsubmit(Request $request){
+        $input = $request->all();
+//        var_dump($input);
+        $time = date('Y-m-d H:i:s', time());
+        $id=DB::table("message")->insert(
+            ['id'=>NULL,'username'=>session('user'),'postdate'=>$time,
+                'title'=>$input['title'],'content'=>$input['content']
+            ]
+        );
+        return redirect()->back()->with('success', '提交信息成功!');
+
+    }//发布通知
 }

@@ -84,6 +84,27 @@
 							<option>8号</option>
 							<option>9号</option>
 							<option>10号</option>
+                             <option>11号</option>
+                             <option>12号</option>
+                             <option>13号</option>
+                             <option>14号</option>
+                             <option>15号</option>
+                             <option>16号</option>
+                             <option>17号</option>
+                             <option>18号</option>
+                             <option>19号</option>
+                             <option>20号</option>
+                             <option>21号</option>
+                             <option>22号</option>
+                             <option>23号</option>
+                             <option>24号</option>
+                             <option>25号</option>
+                             <option>26号</option>
+                             <option>27号</option>
+                             <option>28号</option>
+                             <option>29号</option>
+                             <option>30号</option>
+                             <option>31号</option>
                         </select>
                     </div>
                  

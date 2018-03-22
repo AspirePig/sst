@@ -31,5 +31,5 @@ class Mcontroller extends Controller{
         );
         return redirect()->back()->with('success', '提交信息成功!');
 
-    }
+    }//班长发布作业
 }
