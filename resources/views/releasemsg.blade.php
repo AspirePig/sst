@@ -26,7 +26,9 @@
            <li class="aui-list-item">
                 <div class="aui-list-item-inner">
                     <div class="aui-list-item-label">通知内容</div>
-                    <div class="aui-list-item-input"><input type="textar" name='content' placeholder="内容"></div>
+                    <div class="aui-list-item-input">
+                        <textarea rows="5" type="text" name='content' rows="10" placeholder="内容"></textarea>
+                    </div>
                 </div>
             </li>
         </ul>

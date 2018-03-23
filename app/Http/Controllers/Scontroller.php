@@ -20,4 +20,18 @@ class Scontroller extends Controller{
 
         return view('students/students');
     }
+
+    public function getinform(Request $request){
+        $messages = DB::table('message')
+            ->join('user','message.username','=','user.username')
+            ->select('message.*','user.name')->paginate(5);
+        return view('students/getinform',['messages'=>$messages]);
+    }
+
+    public function openinform(Request $request){
+        $id = $request->route('id');
+        $messages = DB::table('message')->where(['id'=>$id])->first();
+        $name = DB::table('user')->where(['username'=>$messages->username])->value('name');
+        return view('students/openinform',['message'=>$messages,'name'=>$name]);
+    }
 }

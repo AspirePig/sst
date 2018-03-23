@@ -4,7 +4,7 @@
     <div class="box">
         <h2>基本功能</h2>
         <ul>
-            <li><a href="#"><i class="iconfont icon-tongzhi"></i><span>发起通知</span></a></li>
+            <li><a href="teacher/releasemsg"><i class="iconfont icon-tongzhi"></i><span>发起通知</span></a></li>
             <li><a href="#"><i class="iconfont icon-liuyan"></i><span>留言板</span></a></li>
             <li><a href="#"><i class="iconfont icon-toupiao"></i><span>微投票</span></a></li>
             <li><a href="#"><i class="iconfont icon-qingjia"></i><span>请假单</span></a></li>

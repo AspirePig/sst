@@ -23,6 +23,9 @@ Route::get('students/awayschool',function (){
     return view('awayschool');
 });
 Route::post('students/awayschool/submit','Controller@awaysubmit');
+//查看通知页面
+Route::get('students/getinform','Scontroller@getinform');
+Route::get('students/getinform/postid/{id}','Scontroller@openinform');
 
 
 //班长主页面
@@ -47,7 +50,11 @@ Route::post('monitor/releasemsg/submit','Controller@msgsubmit');
 
 //教师主页面
 Route::get('teacher','Tcontroller@show');
-
+//教师发布通知
+Route::get('teacher/releasemsg',function (){
+    return view('releasemsg');
+});
+Route::post('teacher/releasemsg/submit','Controller@msgsubmit');
 
 //微信接口
 Route::any('wx/api', 'wxcontroller@api');
