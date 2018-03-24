@@ -34,4 +34,17 @@ class Scontroller extends Controller{
         $name = DB::table('user')->where(['username'=>$messages->username])->value('name');
         return view('students/openinform',['message'=>$messages,'name'=>$name]);
     }
+
+    public function getwork(Request $request){
+        $messages = DB::table('homework')->paginate(5);
+        return view('students/getwork',['messages'=>$messages]);
+    }
+
+    public function openwork(Request $request){
+        $id = $request->route('id');
+        $messages = DB::table('homework')->where(['id'=>$id])->first();
+        return view('students/openwork',['message'=>$messages]);
+    }
+
+
 }

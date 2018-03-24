@@ -26,6 +26,9 @@ Route::post('students/awayschool/submit','Controller@awaysubmit');
 //查看通知页面
 Route::get('students/getinform','Scontroller@getinform');
 Route::get('students/getinform/postid/{id}','Scontroller@openinform');
+//查看作业
+Route::get('students/getwork','Scontroller@getwork');
+Route::get('students/getwork/postid/{id}','Scontroller@openwork');
 
 
 //班长主页面

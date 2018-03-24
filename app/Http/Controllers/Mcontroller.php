@@ -23,10 +23,10 @@ class Mcontroller extends Controller{
     public function worksubmit(Request $request){
         $input = $request->all();
 //        var_dump($input);
-
+        $time = date('Y-m-d H:i:s', time());
         $id=DB::table("homework")->insert(
             ['id'=>NULL,'username'=>session('user'),'subject'=>$input['subject'],
-                'teacher'=>$input['teacher'],'workcon'=>$input['workcon']
+                'teacher'=>$input['teacher'],'workcon'=>$input['workcon'],'postdate'=>$time
             ]
         );
         return redirect()->back()->with('success', '提交信息成功!');

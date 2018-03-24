@@ -54,7 +54,9 @@
                     </div>
                 </div>
             </form>
-            <p text-align="center">账号:yang 密码:yang</p>
+            <p text-align="center">班长账号:yang 密码:yang</p>
+            <p text-align="center">教师账号:wang 密码:wang</p>
+            <p text-align="center">学生账号:he 密码:he</p>
         </div>
     </div>
 </div>
