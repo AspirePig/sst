@@ -16,7 +16,16 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Tcontroller extends Controller{
+    public function isteacher(){
+        $rank = session('rank');
+        if ($rank==3){
+        }else{
+            return redirect('http://sst.aspirepig.cn/')->with('error', '请重新登录!');
+        }
+    }
+
     public function show(){
+        echo $this->isteacher();
         return view('teacher/teacher');
     }
 }

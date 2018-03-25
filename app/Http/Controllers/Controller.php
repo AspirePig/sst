@@ -52,7 +52,6 @@ class Controller extends BaseController
 
         $username = DB::table('user')->where(['wxid'=>$tmp])->value('username');
         $name = DB::table('user')->where(['wxid'=>$tmp])->value('name');
-        $request->session()->put(['user'=>$username,'rank'=>$rank]);
         if(count($username)!=0){
             $request->session()->put(['name'=>$name,'openid'=>$tmp,'user'=>$username,'rank'=>$rank,'avatarUrl'=>$avatarUrl]);
             if ($rank==1){

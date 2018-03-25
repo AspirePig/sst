@@ -16,11 +16,21 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Mcontroller extends Controller{
+    public function ismonitor(){
+        $rank = session('rank');
+        if ($rank==2){
+        }else{
+            return redirect('http://sst.aspirepig.cn/')->with('error', '请重新登录!');
+        }
+    }
+
     public function show(){
+        echo $this->ismonitor();
         return view('monitor/monitor');
     }
 
     public function worksubmit(Request $request){
+        echo $this->ismonitor();
         $input = $request->all();
 //        var_dump($input);
         $time = date('Y-m-d H:i:s', time());
