@@ -17,7 +17,7 @@
     <div class="userhead"><img src={{session('openid')?session('avatarUrl'):"css/monitor/bz.jpg"}}></div>
     <div class="usernav">
         <h1>{{session('name')}}</h1>
-        <h3>权限：{{session('rank')>2?"辅导员":(session('rank')>1?"班长":"学生")}}</h3>
+        <h3>权限：{{session('rank')>2?"辅导员":(session('rank')>1?"班长":"学生")}}@yield('monitor')</h3>
     </div>
 </div>
 

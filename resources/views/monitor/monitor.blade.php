@@ -1,5 +1,9 @@
 @extends('../common/layout')
-
+@section('monitor')
+    @if(Session('rank')==2)
+        <a href="students">界面:班长</a>
+    @endif
+@endsection
 @section('jiben')
     <div class="box">
         <h2>基本功能</h2>
